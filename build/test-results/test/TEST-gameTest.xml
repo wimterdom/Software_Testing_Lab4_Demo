@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="gameTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-04-04T02:58:08" hostname="ubuntu" time="0.153">
+  <properties/>
+  <testcase name="NullException()" classname="gameTest" time="0.105"/>
+  <testcase name="jarge()" classname="gameTest" time="0.026"/>
+  <system-out><![CDATA[Test Start!!!
+Test End!!!
+Test Start!!!
+Test End!!!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

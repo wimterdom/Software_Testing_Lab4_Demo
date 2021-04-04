@@ -26,6 +26,7 @@ jobs:
       run: ./gradlew assemble
 
 
+
   test:
     needs: build
     runs-on: ubuntu-latest
@@ -40,6 +41,11 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew test
+    - name: Expose as artifact # 顯示名稱
+      uses: actions/upload-artifact@v1 # 引用外部方法，該方法為將指定路徑下的檔案上傳為artifact。
+      with: # 參數
+        name: ${{ steps.getManualLicenseFile.outputs.filePath }} # 引用上面step1的輸出值(outputs)
+        path: ${{ steps.getManualLicenseFile.outputs.filePath }} # 引用上面step1的輸出值(outputs)
       
   assemble:
     needs: [build, test]

@@ -58,8 +58,8 @@ jobs:
       run: ./gradlew jar
     - uses: actions/upload-artifact@v2
       with:
-        name: my-artifact
-        path: bulid/libs/buildjar.jar
+        name: Package
+        path: build/libs
 
 
 

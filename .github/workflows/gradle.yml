@@ -77,23 +77,14 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: buildJar
-        path: path/to/artifact
         
     - name: Checkout
       uses: actions/checkout@v2
-    - uses: actions/cache@v2
-      with:
-        path: |
-          ~/.gradle/caches
-          ~/.gradle/wrapper
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-        restore-keys: |
-          ${{ runner.os }}-gradle-      
     - name: Release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
         files: |
-            *.jar
+            *.ar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

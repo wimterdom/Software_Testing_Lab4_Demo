@@ -89,6 +89,8 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: lab4-1.0-SNAPSHOT.jar
+        path: /home/runner/work/lab4/lab4
+        files: |
+            *.jar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

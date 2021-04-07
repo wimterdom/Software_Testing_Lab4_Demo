@@ -82,7 +82,7 @@ jobs:
     - name: Display structure of downloaded files
       run: |
           ls -R
-          
+          pwd
     - name: Checkout
       uses: actions/checkout@v2
     - name: Release

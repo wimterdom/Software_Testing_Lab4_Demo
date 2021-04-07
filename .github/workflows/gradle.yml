@@ -90,6 +90,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       with:
         #path: /home/runner/work/lab4/lab4
-        files: ~/*.jar
+        files: |
+          *.jar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

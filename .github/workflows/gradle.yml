@@ -7,7 +7,7 @@ on:
   push:
     branches: [ main ]
     tags:
-      - 'V*.*.*'
+      - 'V*'
   pull_request:
     branches: [ main ]
 

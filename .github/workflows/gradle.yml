@@ -72,7 +72,7 @@ jobs:
 
   Release:
     needs: Assemble
-    if: ${{ github.ref == 'refs/tags' }}
+    #if: ${{ github.ref == 'refs/tags' }}
     runs-on: ubuntu-latest
     
     steps:
